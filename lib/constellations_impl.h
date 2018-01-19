@@ -29,6 +29,7 @@ public:
 	~constellation_bpsk_impl();
 
 	unsigned int decision_maker(const gr_complex *sample);
+	float decision_maker_soft(const gr_complex *sample);
 };
 
 

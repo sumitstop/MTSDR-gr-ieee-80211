@@ -50,6 +50,8 @@ void ls::equalize(gr_complex *in, int n, gr_complex *symbols, uint8_t *bits, boo
 			} else {
 				symbols[c] = in[i] / d_H[i];
 				bits[c] = mod->decision_maker(&symbols[c]);
+                                //std::cout << (-4*real(symbols[c])) << std::endl;
+				mod->decision_maker_soft(&symbols[c]);
 				c++;
 			}
 		}

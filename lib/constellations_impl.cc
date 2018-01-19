@@ -42,6 +42,10 @@ constellation_bpsk_impl::decision_maker(const gr_complex *sample) {
 	return (real(*sample) > 0);
 }
 
+float
+constellation_bpsk_impl::decision_maker_soft(const gr_complex *sample) {
+	return (-4*real(*sample));
+}
 
 /**********************************************************/
 
